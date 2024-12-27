@@ -7,10 +7,12 @@ class CountryProvider extends ChangeNotifier {
   CountryProvider() {
     pickCountry();
   }
-
+  bool isloader = false;
   CountryNamAndFlageModel countryName = CountryNamAndFlageModel();
 
   pickCountry() async {
+    isloader = true;
+    notifyListeners();
     var respos = await http.get(
         Uri.parse('https://countriesnow.space/api/v0.1/countries/flag/images'));
     // print(" ${respos.body}");
@@ -20,5 +22,7 @@ class CountryProvider extends ChangeNotifier {
       notifyListeners();
       print('this is tempdata ${tempdata}');
     }
+    isloader = false;
+    notifyListeners();
   }
 }
