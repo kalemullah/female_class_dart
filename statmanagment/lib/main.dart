@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:statmanagment/country/country_screen.dart';
+import 'package:statmanagment/gemini/gemini_screen.dart';
 import 'package:statmanagment/home_screen.dart';
 import 'package:statmanagment/weather/weather_screen.dart';
 
@@ -33,7 +34,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: WeatherScreen(),
+      home: GeminiScreen(),
+      // WeatherScreen(),
 
       // const CountryScreen(),
     );

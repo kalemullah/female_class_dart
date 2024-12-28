@@ -15,7 +15,7 @@ class WeatherProvider extends ChangeNotifier {
     isloading = true;
     notifyListeners();
     var respos = await http.get(Uri.parse(
-        'https://api.weatherstack.com/current?access_key=9f895c010e8ba545266c63a7aa079ccc&query=$city'));
+        'https://api.weatherstack.com/current?access_key=d87e5a0b3234f4659fdafd765de9a32c&query=$city'));
 
     // print('this is tempdata ${respos.body}');
     if (respos.statusCode == 200) {
